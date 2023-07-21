@@ -1,4 +1,4 @@
-package com.example.HibernateConcepts.entity;
+package com.example.HibernateConcepts.entity.person;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -27,7 +27,8 @@ public class Passport {
     private Long id;
     private String name;
 
-    // @OneToOne(mappedBy = "passport", cascade = CascadeType.ALL)
+    // mappedBy indicates bidirectional nature
     @OneToOne(mappedBy = "passport", cascade = CascadeType.ALL)
+    @JsonIgnore         // To prevent infinite loop in fasterxml json conversion
     private Person person;
 }

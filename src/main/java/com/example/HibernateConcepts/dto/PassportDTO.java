@@ -1,6 +1,6 @@
 package com.example.HibernateConcepts.dto;
 
-import com.example.HibernateConcepts.entity.Passport;
+import com.example.HibernateConcepts.entity.person.Passport;
 import lombok.Getter;
 import lombok.Setter;
 

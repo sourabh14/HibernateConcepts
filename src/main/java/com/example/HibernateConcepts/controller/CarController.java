@@ -1,6 +1,6 @@
 package com.example.HibernateConcepts.controller;
 
-import com.example.HibernateConcepts.entity.Car;
+import com.example.HibernateConcepts.entity.automobile.Car;
 import com.example.HibernateConcepts.service.CarService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,12 +1,9 @@
-package com.example.HibernateConcepts.entity;
+package com.example.HibernateConcepts.entity.automobile;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,18 +12,15 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "person")
+@Table(name = "engine")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class Person {
+public class Engine {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String name;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn
-    private Passport passport;
 }

@@ -1,6 +1,6 @@
 package com.example.HibernateConcepts.service;
 
-import com.example.HibernateConcepts.entity.Car;
+import com.example.HibernateConcepts.entity.automobile.Car;
 
 public interface CarService {
 

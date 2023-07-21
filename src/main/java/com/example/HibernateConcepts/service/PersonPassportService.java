@@ -1,8 +1,10 @@
 package com.example.HibernateConcepts.service;
 
-import com.example.HibernateConcepts.entity.Car;
-import com.example.HibernateConcepts.entity.Passport;
-import com.example.HibernateConcepts.entity.Person;
+import java.util.List;
+
+import com.example.HibernateConcepts.dto.UpdatePersonNameRequest;
+import com.example.HibernateConcepts.entity.person.Passport;
+import com.example.HibernateConcepts.entity.person.Person;
 
 public interface PersonPassportService {
     Person createPerson(Person person);
@@ -12,4 +14,10 @@ public interface PersonPassportService {
     Person getPersonById(Long id);
 
     Passport getPassportById(Long id);
+
+    List<Person> getAllPerson();
+
+    Person updatePersonName(UpdatePersonNameRequest updatePersonNameRequest);
+
+    Person getPersonByName(String name);
 }

@@ -1,4 +1,4 @@
-package com.example.HibernateConcepts.entity;
+package com.example.HibernateConcepts.entity.person;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,15 +12,15 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "tyre")
+@Table(name = "debitcard")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class Tyre {
+public class DebitCard {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int id;
-    private String name;
+    private Long id;
+    private String provider;
 }

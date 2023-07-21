@@ -2,7 +2,7 @@ package com.example.HibernateConcepts.service.impl;
 
 import java.util.Optional;
 
-import com.example.HibernateConcepts.entity.Car;
+import com.example.HibernateConcepts.entity.automobile.Car;
 import com.example.HibernateConcepts.repository.CarRepository;
 import com.example.HibernateConcepts.service.CarService;
 import lombok.AllArgsConstructor;
