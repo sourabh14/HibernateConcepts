@@ -8,4 +8,5 @@ public interface CarService {
 
     Car getCarById(Long id);
 
+    Car getCarByIdByHibernateQuery(Long id);
 }

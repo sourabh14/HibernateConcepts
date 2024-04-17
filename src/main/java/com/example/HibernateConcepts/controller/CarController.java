@@ -34,6 +34,7 @@ public class CarController {
     @GetMapping("lazy/{id}")
     public ResponseEntity<Object> getCarByIdLazy(@PathVariable("id") Long id) {
         Car car = carService.getCarById(id);
+        System.out.println("car = " + car);
         System.out.println("Car: ");
         System.out.println("    id: " + car.getId());
         System.out.println("    name: " + car.getName());
@@ -42,5 +43,19 @@ public class CarController {
         System.out.println("    tyre: " + car.getTyre());
         return new ResponseEntity<>("See logs", HttpStatus.OK);
     }
+
+    @GetMapping("lazyWithJpql/{id}")
+    public ResponseEntity<Object> getCarByIdLazyWithJpql(@PathVariable("id") Long id) {
+        Car car = carService.getCarByIdByHibernateQuery(id);
+        System.out.println("Car: ");
+        System.out.println("    id: " + car.getId());
+        System.out.println("    name: " + car.getName());
+        System.out.println("    engine: " + car.getEngine());
+        // When the getter is called for tyre, the hibernate will make db call at this point
+        System.out.println("    tyre name: " + car.getTyre().getName());
+        return new ResponseEntity<>("See logs", HttpStatus.OK);
+    }
+
+
 
 }
